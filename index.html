@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Blankfox</title>
+
+    <!-- custom css styles -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- js interactivity -->
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body id="page-top">
+    <!-- nav bar -->
+    <nav>
+        <div id="logo-top">
+            <a href="#page-top">
+                <img src="images/portfolio_logo_light_200x200.png" alt="logo">
+                <h4>BLANKFOX</h4>
+            </a>
+        </div>
+        <div id="nav-top">
+            <ul>
+                <li class="nav-item">
+                    <a href="#portfolio">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--https://www.w3schools.com/howto/howto_js_lightbox.asp
+    https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css
+    https://www.youtube.com/results?search_query=funimation+logo-->
+
+    <!-- turn into static background using background-attachment: fixed -->
+    <!-- Masthead Video -->
+    <header>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="videos/portfolio_logo.mp4" type="video/mp4">
+        </video>
+        <div id="overlay">
+            <div id="overlay-title">
+                <h1>BLANKFOX</h1>
+            </div>
+            <div id="overlay-button">
+                <a href="#portfolio">
+                    <img src="images/icons/icon_arrow_500x300.png" alt="go to portfolio">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- turn into lightbox gallery -->
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div id="portfolio-flex">
+            <h2>PORTFOLIO</h2>
+            <h4>- Demo Reel -</h4>
+            <div class="portfolio-flex-break"></div>
+            <iframe id="demoreel" src="https://www.youtube.com/embed/W8ppfBXH3XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="portfolio-flex-break"></div>
+            <div>
+            </div>
+            <div class="portfolio-content" onclick="openModal(); slide(1);">
+                <img src="images/portfolio-content/p1-thumbnail-3drobot.jpg" alt="3D robot">
+            </div>
+            <div class="portfolio-content" onclick="openModal(); slide(2);">
+                <img src="images/portfolio-content/p2-thumbnail-onisculpt.jpg" alt="Oni model">
+            </div>
+            <div class="portfolio-content" onclick="openModal(); slide(3);">
+                <img src="images/portfolio-content/p3-thumbnail-simplescene.jpg" alt="placeholder">
+            </div>
+            <div class="portfolio-flex-break"></div>
+            <!-- row 2 -->
+            <div class="portfolio-content" onclick="openModal(); slide(4);">
+                <img src="images/portfolio-content/p4-thumbnail-avarice.jpg" alt="placeholder">
+            </div>
+            <div class="portfolio-content" onclick="openModal(); slide(5);">
+                <img src="images/portfolio-content/p5-thumbnail-vrdragon.jpg" alt="placeholder">
+            </div>
+            <div class="portfolio-content" onclick="openModal(); slide(6);">
+                <img src="images/portfolio-content/p6-thumbnail-arduinohand.jpg" alt="placeholder">
+            </div>
+            <div class="portfolio-flex-break"></div>
+            <!-- row 3 -->
+            <div class="portfolio-content" onclick="openModal(); slide(7);">
+                <img src="images/portfolio-content/p7-thumbnail-holobuilding.jpg" alt="placeholder">
+            </div>
+            <div class="portfolio-content" onclick="openModal(); slide(8);">
+                <img src="images/portfolio-content/p8-thumbnail-shapeanim.jpg" alt="placeholder">
+            </div>
+            <div class="portfolio-content" onclick="openModal(); slide(9);">
+                <img src="images/portfolio-content/p9-thumbnail-shatter.jpg" alt="placeholder">
+            </div>
+        </div>
+
+        <!-- https://www.w3schools.com/howto/howto_js_lightbox.asp -->
+        <!-- Modal slideshow -->
+        <div id="modal">
+            <!-- close icon (&times;) -->
+            <span id="close" onclick="closeModal();">&times;</span>
+            <div id="modal-content">
+                <div class="slide">
+                    <div class="slide-flex">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                            <source src="images/portfolio-content/p1-3drobot.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <h3>3D Robot</h3>
+                            <h4>Autodesk Maya</h4>
+                        </div>
+                        <p>
+                            A model that I made in my 3rd semester of the Interactive Media Development program. We were tasked with modelling robots that would eventually be rigged, posed, and animated. This is my first completed humanoid character since I began this program.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-flex">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                            <source src="images/portfolio-content/p2-onisculpt.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <h3>Oni Skull Sculpt</h3>
+                            <h4>Autodesk Mudbox, Autodesk Maya</h4>
+                        </div>
+                        <p>
+                            Fusce porttitor condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam justo metus, hendrerit et dolor sit amet, facilisis blandit lectus. Maecenas quis ipsum eu urna maximus ullamcorper.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-flex">
+                        <img src="images/portfolio-content/p3-simplescene.jpg" alt="placeholder">
+                        <div>
+                            <h3>3D Simple Scene</h3>
+                            <h4>Autodesk Maya</h4>
+                        </div>
+                        <p>
+                            Fusce porttitor condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam justo metus, hendrerit et dolor sit amet, facilisis blandit lectus. Maecenas quis ipsum eu urna maximus ullamcorper.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-flex">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                            <source src="images/portfolio-content/p4-avarice.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <h3>HTML Game: Avarice</h3>
+                            <h4>HTML Canvas, Javascript</h4>
+                        </div>
+                        <p>
+                            Fusce porttitor condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam justo metus, hendrerit et dolor sit amet, facilisis blandit lectus. Maecenas quis ipsum eu urna maximus ullamcorper.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-flex">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                            <source src="images/portfolio-content/p5-vrdragon.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <h3>Dragon Sculpt</h3>
+                            <h4>Google Tiltbrush</h4>
+                        </div>
+                        <p>
+                            Fusce porttitor condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam justo metus, hendrerit et dolor sit amet, facilisis blandit lectus. Maecenas quis ipsum eu urna maximus ullamcorper.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-flex">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                            <source src="images/portfolio-content/p6-arduinohand.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <h3>Arduino Hand Prototype</h3>
+                            <h4>Arduino Uno, Arduino IDE (C++)</h4>
+                        </div>
+                        <p>
+                            Fusce porttitor condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam justo metus, hendrerit et dolor sit amet, facilisis blandit lectus. Maecenas quis ipsum eu urna maximus ullamcorper.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-flex">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                            <source src="images/portfolio-content/p7-holobuilding.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <h3>Holo-Building</h3>
+                            <h4>After Effects</h4>
+                        </div>
+                        <p>
+                            Fusce porttitor condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam justo metus, hendrerit et dolor sit amet, facilisis blandit lectus. Maecenas quis ipsum eu urna maximus ullamcorper.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-flex">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                            <source src="images/portfolio-content/p8-shapeanim.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <h3>Shape Animation</h3>
+                            <h4>After Effects</h4>
+                        </div>
+                        <p>
+                            Fusce porttitor condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam justo metus, hendrerit et dolor sit amet, facilisis blandit lectus. Maecenas quis ipsum eu urna maximus ullamcorper.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-flex">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                            <source src="images/portfolio-content/p9-shatter.mp4" type="video/mp4">
+                        </video>
+                        <div>
+                            <h3>Rotoscope Shatter</h3>
+                            <h4>After Effects</h4>
+                        </div>
+                        <p>
+                            Fusce porttitor condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam justo metus, hendrerit et dolor sit amet, facilisis blandit lectus. Maecenas quis ipsum eu urna maximus ullamcorper.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal controls -->
+                <a id="prev" onclick="slideNav(-1);">
+                    <img src="images/icons/icon_arrow_l_500x500.png" alt="go to portfolio">
+                </a>
+                <a id="next" onclick="slideNav(1);">
+                    <img src="images/icons/icon_arrow_r_500x500.png" alt="go to portfolio">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div id="about-flex">
+            <h2>ABOUT</h2>
+            <div id="about-content-flex">
+                <img src="images/portfolio_about_720x1080.jpg" alt="photo of RJ">
+                <div>
+                    <p>Heya! I'm Rommel Jay Cayanga, but I like to go by RJ. I'm a multimedia designer that has experience in many design fields, such as graphic design, motion design, and interactive design.
+                        However, my main objective is to become a skilled 3D designer for the purpose of meeting my ultimate goal: to become a member of a video game pipeline as a 3D environmental artist.
+                        <br><br>
+                        I have a deep passion for video games, especially the aspect of giving the player a unique experience within a fantastical world. The way the player connects themselves to a world and encounter different challenges and feel such raw emotions is an invigorating experience. I feel that if I could let a player enjoy a video game that I've worked on, that would be an accomplishment in and of itself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- refer to https://www.w3schools.com/howto/howto_css_contact_form.asp for php -->
+    <!-- Contact Section -->
+    <section id="contact">
+        <div id="contact-flex">
+            <h2>CONTACT</h2>
+            <div id="contact-input-flex">
+                <h4>- If you have any inquiries, please fill out the form below! -</h4>
+                <form>
+                    <!--<label for="input-name">Name</label>-->
+                    <input type="text" id="input-name" name="name" placeholder="Name">
+                    <!--<label for="input-email">E-Mail</label>-->
+                    <input type="text" id="input-email" name="email" placeholder="E-Mail">
+                    <!--<label for="input-phone">Phone Number</label>-->
+                    <input type="text" id="input-phone" name="phone" placeholder="Phone Number">
+                    <!--<label for="input-message">Message</label>-->
+                    <textarea type="text" id="input-message" name="message" placeholder="Message"></textarea>
+                </form>
+                <div class="submit">
+                    <a onclick="submit">Submit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
