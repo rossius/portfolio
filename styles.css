@@ -269,13 +269,13 @@ section {
     justify-content: center;
     margin-bottom: 100px;
 }
-#portfolio-flex>video {
-    width: 60%;
-    height: auto;
+#demoreel {
+    width: 1060px;
+    height: 615px;;
     margin-bottom: 50px;
 }
 
-#portfolio-flex>video:focus {
+#demoreel:focus {
     outline: none;
 }
 
